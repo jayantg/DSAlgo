@@ -10,12 +10,12 @@ public class RobinKarp {
 	static int num = 10;
 	
 	public static void main(String[] args) {
-		char[] str = "abc".toCharArray();
+		char[] pattern = "abc".toCharArray();
 		char[] text = "dabc".toCharArray();
-		System.out.println("Pattern start position in text " + patternSearch(str, text));
+		System.out.println("Pattern start position in text = " + patternSearch(pattern, text));
 	}
 
-	public static int patternSearch(char[] pattern, char[] text) {
+	private static int patternSearch(char[] pattern, char[] text) {
 		int phash = createHash(0, pattern.length, pattern);
 		int hash = createHash(0, pattern.length, text);
 		for(int i =1; i<= text.length - pattern.length + 1 ; i++) {
