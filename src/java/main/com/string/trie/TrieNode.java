@@ -3,6 +3,11 @@ package com.string.trie;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 
+ * @author jayantg
+ *
+ */
 public class TrieNode {
 	private Map<Character, TrieNode> children;
 	private boolean isLast;

@@ -1,30 +1,16 @@
 package com.string.trie;
 
+/**
+ * 
+ * @author jayantg
+ *
+ */
 public class Trie {
 
 	private TrieNode root;
 	
 	Trie(){
 		root = new TrieNode();
-	}
-	
-	/**
-	 * Test method
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		Trie t = new Trie();
-		t.insert("abc");
-		t.insert("abcd");
-
-		System.out.println(t.search("ab")); // false 
-		System.out.println(t.search("abc")); // true
-		System.out.println(t.search("abcd")); // true
-		t.delete("abc");
-		System.out.println(t.search("ab")); // false
-		System.out.println(t.search("abc")); // false
-		System.out.println(t.search("abcd")); // true
-
 	}
 	
 	/**
@@ -99,4 +85,23 @@ public class Trie {
 		return true;
 	}
 	
+	
+	/**
+	 * Test method
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Trie t = new Trie();
+		t.insert("abc");
+		t.insert("abcd");
+
+		System.out.println(t.search("ab")); // false 
+		System.out.println(t.search("abc")); // true
+		System.out.println(t.search("abcd")); // true
+		t.delete("abc");
+		System.out.println(t.search("ab")); // false
+		System.out.println(t.search("abc")); // false
+		System.out.println(t.search("abcd")); // true
+
+	}
 }
