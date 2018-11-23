@@ -1,4 +1,4 @@
-package com.algo.string;
+package com.string;
 
 /**
  * 
