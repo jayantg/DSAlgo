@@ -30,7 +30,7 @@ public class SingleLinkedList {
      *
      * @param current
      */
-    public void printList(ListNode current){
+    public static void printList(ListNode current){
         System.out.println();
         while(current != null ){
             System.out.print(current.getData() + " -> ");
