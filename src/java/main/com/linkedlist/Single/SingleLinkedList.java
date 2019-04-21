@@ -47,7 +47,7 @@ public class SingleLinkedList {
         int length = 0;
         ListNode current = root;
         while(current != null){
-            length=length++;
+            length++;
             current = current.getNext();
         }
         return length;
