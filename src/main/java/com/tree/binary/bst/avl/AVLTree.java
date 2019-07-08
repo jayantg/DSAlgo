@@ -1,5 +1,10 @@
 package com.tree.binary.bst.avl;
 
+/**
+ * AVL tree is a binary search tree with property that every node height difference between left and right children should be
+ * in range [-1,1] (-1||0||1)
+ * It is also called balanced binary tree
+ */
 public class AVLTree {
     private Node root;
 
