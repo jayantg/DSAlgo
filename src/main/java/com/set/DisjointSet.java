@@ -3,9 +3,9 @@ package com.set;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DisjointSet {
+public class DisjointSet<T> {
 
-    private Map<Integer, Node> map;
+    private Map<T, Node<T>> map;
 
     public DisjointSet() {
         this.map = new HashMap<>();
@@ -38,12 +38,12 @@ public class DisjointSet {
         System.out.println(ds.findSet(7).getData());
     }
 
-    private Node findSet(int data) {
+    public Node<T> findSet(T data) {
         Node node = map.get(data);
         return findSet(node);
     }
 
-    private Node findSet(Node node) {
+    private Node<T> findSet(Node<T> node) {
         Node parent = node.getParent();
         if(parent == node){
             return parent;
@@ -54,7 +54,7 @@ public class DisjointSet {
         return node.getParent();
     }
 
-    private void union(int a, int b) {
+    public void union(T a, T b) {
 
         Node nodeA = findSet(a);
         Node nodeB = findSet(b);
@@ -78,7 +78,7 @@ public class DisjointSet {
         }
     }
 
-    private void makeSet(int data) {
+    public void makeSet(T data) {
         Node node = new Node(data);
         node.setParent(node);
         node.setRank(0);

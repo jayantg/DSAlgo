@@ -1,19 +1,19 @@
 package com.set;
 
-public class Node {
-    private int data;
+public class Node<T> {
+    private T data;
     private int rank;
     private Node parent;
 
-    public Node(int data) {
+    public Node(T data) {
         this.data = data;
     }
 
-    public int getData() {
+    public T getData() {
         return data;
     }
 
-    public void setData(int data) {
+    public void setData(T data) {
         this.data = data;
     }
 
